@@ -2,7 +2,7 @@
   "name": "nak-tileview-vs-repeat",
   "description": "Virtual Scroll for AngularJS ngRepeat directive - tailored for gridview",
   "homepage": "https://github.com/nkithcart/nak-tileview-vs-repeat",
-  "main": "src/angular-vs-repeat.js",
+  "main": "src/*",
   "keywords": [
     "angularjs",
     "javascript",
