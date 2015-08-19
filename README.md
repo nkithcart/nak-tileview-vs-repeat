@@ -1,6 +1,8 @@
 angular-vs-repeat
 
-Demo : http://manish0610.github.io/tileview-vs-repeat/
+Demo for original tileview version : http://manish0610.github.io/tileview-vs-repeat/
+
+Original tileview source : https://github.com/manish0610/tileview-vs-repeat
 
 Original Source : https://github.com/kamilkp/angular-vs-repeat
 
