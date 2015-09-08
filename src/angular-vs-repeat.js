@@ -276,7 +276,7 @@
                                                         $scope.containerHeight = $element[0].offsetHeight;
                                                         $scope.containerWidth = $element[0].offsetWidth;
                                                         elementOnRow = $attrs.vsElementOnRow ? parseInt($attrs.vsElementOnRow, 10) : Math.floor($element[0].offsetWidth / $scope.childWidth);
-                                                        $scope.elementOnRow = elementOnRow;
+                                                        $scope.elementOnRow = (elementOnRow && elementOnRow >= 1) ? elementOnRow : 1;
 
                                                         //console.log("Element :" + elementOnRow);
                                                     }
