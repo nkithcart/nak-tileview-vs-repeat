@@ -275,7 +275,13 @@
                                                         $scope.childWidth = children[0].outerWidth(true);*/
                                                         $scope.containerHeight = $element[0].offsetHeight;
                                                         $scope.containerWidth = $element[0].offsetWidth;
-                                                        elementOnRow = $attrs.vsElementOnRow ? parseInt($attrs.vsElementOnRow, 10) : Math.floor($element[0].offsetWidth / $scope.childWidth);
+                                                        
+                                                        // since the elementOnRow field is used in other areas of this directive, we need to calculate
+                                                        // and correct 'elementOnRow = 0' for both elementOnRow fields
+                                                        var calcPerRow = Math.floor($element[0].offsetWidth / $scope.childWidth);
+                                                        // if calculation >= 1, default to 1 to ensure elements will always show
+                                                        elementOnRow = $attrs.vsElementOnRow ? parseInt($attrs.vsElementOnRow, 10) : 
+                                                        		(calcPerRow >= 1) ? calcPerRow : 1;
                                                         $scope.elementOnRow = (elementOnRow && elementOnRow >= 1) ? elementOnRow : 1;
 
                                                         //console.log("Element :" + elementOnRow);
